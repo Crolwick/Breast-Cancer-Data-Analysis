@@ -62,7 +62,7 @@ def displayCount(ageRange):
 
 
 
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(facecolor='#eeaccd')
     ax.pie(tumorArr, labels=tumorLabels, autopct=lambda pct: display(pct, tumorArr), shadow=True)
     ax.set_title(f'{ageRange} Tumor Size Count')
 
