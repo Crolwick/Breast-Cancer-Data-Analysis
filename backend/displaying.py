@@ -25,14 +25,10 @@ def displayAll():
 
     for tumor in tumorSizeCount:
         tumorArr = np.append(tumorArr, tumorSizeCount[tumor])
+    
 
-    #print(f'TumorArr: {tumorArr}')
-
-
-    explode = (0, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-
-    fig, ax = plt.subplots()
-    ax.pie(tumorArr, labels=clean.tumorSizeLabels, autopct=lambda pct: display(pct, tumorArr), shadow=True, explode=explode)
+    fig, ax = plt.subplots(facecolor='#eeaccd')
+    ax.pie(tumorArr, labels=clean.tumorSizeLabels, autopct=lambda pct: display(pct, tumorArr), shadow=True)
     ax.set_title('All Ages Tumor Size Count')
 
 
